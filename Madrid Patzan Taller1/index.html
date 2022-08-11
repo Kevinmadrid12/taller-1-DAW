@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descuentos para clientes</title>
+    <link rel="stylesheet" href="">
+      <script>
+    var cantidad,precio,descu1,descu2,descu3,descu4,descu5,compra,total,name;
+    precio = parseFloat(promt("Ingresar Precio"));
+    cantidad = parseFloat(promt("Ingresar Cantidad"));
+    name = parseFloat(prompt("Ingrese su nombre"));
+    
+    compra = precio*cantidad;
+    descu1 = precio*16;
+    descu2 = precio*12;
+    descu3 = precio*60;
+    
+    if (precio < 20) {
+        total= compra-descu1;
+    }else if (precio =20 || precio < 100){
+        total= compra-descu2;
+    }else if (precio > 100){
+        total= compra-descu3;
+    }
+
+    alert("Hola "+ name+ "el total con tu descuento es de " + total)
+      </script>
+</head>
+<body>
+  
+    <form>
+        <table>
+            <tr>
+                <td>
+                    <label for="total">Ingresa el total a pagar</label>
+                </td>
+            </tr>
+            <td>
+                <input name="total" required="required"/>
+            </td>
+            <tr>
+            <td>
+                <label for="name">Ingrese su nombre</label>
+            </td>
+            <td>
+                <input name="name" required="required"/>
+            </td>
+            </tr>
+            <tr align="center">
+                        <td colspan="2" rowspan="1">
+                            <input value="Procesar" type="button" onclick="algoritmo();" />
+                            <input type="reset" />
+                        </td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>
